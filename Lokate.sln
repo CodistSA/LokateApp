@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lokate", "Lokate\Lokate.csproj", "{60A09EB4-A529-499B-AA3F-1D48086EFFFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lokate.Tests", "Lokate.Tests\Lokate.Tests.csproj", "{E4CC0632-EF9B-4807-A4E4-80C7C92C104F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60A09EB4-A529-499B-AA3F-1D48086EFFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A09EB4-A529-499B-AA3F-1D48086EFFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A09EB4-A529-499B-AA3F-1D48086EFFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A09EB4-A529-499B-AA3F-1D48086EFFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4CC0632-EF9B-4807-A4E4-80C7C92C104F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4CC0632-EF9B-4807-A4E4-80C7C92C104F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4CC0632-EF9B-4807-A4E4-80C7C92C104F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4CC0632-EF9B-4807-A4E4-80C7C92C104F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {570B9794-CF94-44C5-AFCA-A0D4CFF960C2}
+	EndGlobalSection
+EndGlobal

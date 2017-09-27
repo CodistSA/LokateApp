@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/fullcalendar.css" rel="stylesheet" />
+    <link href="~/Content/CSS/maruti-style.css" rel="stylesheet" />
+    <link href="~/Content/CSS/maruti-media.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    @*<script src="~/Scripts/jquery-3.2.1.js"></script>*@
+    @*<script src="~/Scripts/bootstrap.min.js"></script>*@
+    @*<script src="~/Scripts/fullcalendar.min.js"></script>*@
+    <script src="~/Scripts/maruti.js"></script>
+    <script src="~/Scripts/maruti.dashboard.js"></script>
+
+    <style>
+        h1 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!--Header-part-->
+    <div id="header">
+        @*<h1>@Html.ActionLink("Lokate","Dashboard","Admin",null)</h1>*@
+        <h1><a href="#" style="color: white">Lokate</a></h1>
+    </div>
+    <!--top-Header-messaages-->
+    <div class="btn-group rightzero"> <a class="top_message tip-left" title="Manage Files"><i class="fa fa-file"></i></a> <a class="top_message tip-bottom" title="Manage Users"><i class="fc fa-user"></i></a> <a class="top_message tip-bottom" title="Manage Comments"><i class="icon-comment"></i><span class="label label-important">5</span></a> <a class="top_message tip-bottom" title="Manage Orders"><i class="icon-shopping-cart"></i></a> </div>
+    <!--close-top-Header-messaages-->
+    <!--top-Header-menu-->
+    <div id="user-nav" class="navbar navbar-inverse">
+        <ul class="nav">
+            <li class=""><a title="" href="#"><i class="fa fa-user"></i> <span class="text">Profile</span></a></li>
+            @*<li class=""><@Html.ActionLink("Logout","Index", "Home", null, null)/><i class="fa fa-sign-out"></i> <span class="text"></span></li>*@
+            <li class="" id="btnLogout"><a title="" href="@Url.Action("Index", "Home")"><i class="fa fa-sign-out"></i> <span class="text">Logout</span></a></li>
+        </ul>
+    </div>
+    <!--close-top-Header-menu-->
+    <div id="sidebar">
+        <a href="#" class="visible-phone"><i class="fa fa-tachometer"></i> Dashboard</a>
+        <ul>
+            <li class="active"><a href="index.html"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a> </li>
+            <li> <a href="#"><i class="fa fa-user"></i> <span>Management</span></a> </li>
+            <li> <a href="#"><i class="fa fa-product-hunt"></i> <span>Promotions</span></a> </li>
+            <li><a href="#"><i class="fa fa-users"></i> <span>Promoters</span></a></li>
+            <li><a href="#"><i class="fa fa-location-arrow"></i> <span>Locations</span></a></li>
+            <li><a href="#"><i class="fa fa-user-plus"></i> <span>Add Administrators</span></a></li>
+            <li><a href="#"><i class="fa fa-file-o"></i> <span>Reports</span></a></li>
+            @*<li class="submenu">
+                <a href="#"><i class="icon icon-th-list"></i> <span>Forms</span> <span class="label label-important">3</span></a>
+                <ul>
+                    <li><a href="form-common.html">Basic Form</a></li>
+                    <li><a href="form-validation.html">Form with Validation</a></li>
+                    <li><a href="form-wizard.html">Form with Wizard</a></li>
+                </ul>
+            </li>*@
+            @*<li><a href="buttons.html"><i class="icon icon-tint"></i> <span>Buttons &amp; icons</span></a></li>
+            <li><a href="interface.html"><i class="icon icon-pencil"></i> <span>Eelements</span></a></li>
+            <li class="submenu">
+                <a href="#"><i class="icon icon-file"></i> <span>Addons</span> <span class="label label-important">4</span></a>
+                <ul>
+                    <li><a href="index2.html">Dashboard2</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="chat.html">Chat option</a></li>
+                </ul>
+            </li>*@
+        </ul>
+    </div>
+
+    @*<div>*@
+    @RenderBody()
+    @*</div>*@
+</body>
+</html>

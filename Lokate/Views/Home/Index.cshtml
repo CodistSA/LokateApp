@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Lokate";
+    Layout = "~/Views/Shared/_LayoutPageIndex.cshtml";
+}
+
+
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+    <img src="~/Content/Logo/WELCOME-650x250.png" style="width:70%">
+    <div class="row col-xs-12">
+        @Html.ActionLink("Login","Login",null,new {@class = "btn btn-outline-info btn-lg col-xs-6", style = "width:400px; margin: 0 auto" })
+        @Html.ActionLink("Registration","RegistrationForm", null,new { @class = "btn btn-outline-info btn-lg col-xs-6", style = "width:400px; margin: 0 auto" })
+        @*<button type="button" class="btn btn-outline-info btn-lg col-xs-6" style="width:400px; margin: 0 auto"><i class="fa fa-sign-in" aria-hidden="true"></i> Log In</button>*@
+
+        @*<button type="button" class="btn btn-outline-info btn-lg col-xs-6" style="width:400px; margin: 0 auto"><i class="fa fa-pencil" aria-hidden="true"></i> Register</button>*@
+    </div>
+</header>
