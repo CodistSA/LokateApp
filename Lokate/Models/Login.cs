@@ -27,13 +27,18 @@ namespace Lokate.Models
         {
             get; set;
         }
+
+        public string AdminID
+        {
+            get;
+        }
         public bool IsUserExist(string AdminEmail, string AdminPassword)
         {
             bool flag = false;
             SqlConnection connection = new SqlConnection(
     System.Configuration.ConfigurationManager.ConnectionStrings["cs"].ConnectionString);
             connection.Open();
-            SqlCommand command = new SqlCommand("select count(*) from [lokateapp_DB].[AdminUsers] where Admin_Email = '" + AdminEmail + "' and Admin_Password = '" + AdminPassword + "'", connection);
+            SqlCommand command = new SqlCommand("select AdminID, Admin_Email, Admin_Password from [lokateapp_DB].[AdminUsers] where Admin_Email = '" + AdminEmail + "' and Admin_Password = '" + AdminPassword + "'", connection);
             flag = Convert.ToBoolean(command.ExecuteScalar());
             connection.Close();
             return flag;

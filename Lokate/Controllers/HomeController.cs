@@ -44,6 +44,9 @@ namespace Lokate.Controllers
                 if (model.IsUserExist(model.AdminEmail, model.AdminPassword))
                 {
                     ViewBag.UserName = model.AdminEmail;
+                    ViewBag.Password = model.AdminPassword;
+                    Session["AdminID"] = model.AdminID;
+                    Console.WriteLine(Session["AdminID"]);
                     FormsAuthentication.RedirectFromLoginPage(model.AdminEmail, false);
                     return RedirectToAction("Dashboard", "Admin");
                 }
