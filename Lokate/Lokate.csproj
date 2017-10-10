@@ -105,7 +105,24 @@
     <Content Include="Content\Logo\Lokate.png" />
     <Content Include="Content\Logo\WELCOME-650x250.png" />
     <Content Include="Global.asax" />
+    <EntityDeploy Include="Models\AdminDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AdminDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AdminDataModel.edmx.diagram">
+      <DependentUpon>AdminDataModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Models\AdminDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdminDataModel.edmx</DependentUpon>
+      <LastGenOutput>AdminDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AdminDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdminDataModel.edmx</DependentUpon>
+      <LastGenOutput>AdminDataModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\fullcalendar.min.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
@@ -127,6 +144,25 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\AdminDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AdminDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AdminDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AdminUser.cs">
+      <DependentUpon>AdminDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Registration.cs" />

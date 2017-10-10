@@ -19,7 +19,33 @@ namespace Lokate.Controllers
         }
         public ActionResult Dashboard()
         {
-            return View("Dashboard");
+            if (Session["AdminID"] != null)
+            {
+                return View("Dashboard");
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(Models.Login objUser)
+        {
+            if (ModelState.IsValid)
+            {
+                using (Models.lokateapp_DBEntities db = new Models.lokateapp_DBEntities())
+                {
+                    var obj = db.AdminUsers.Where(a => a.Admin_Email.Equals(objUser.AdminEmail) && a.Admin_Password.Equals(objUser.AdminPassword));
+                    if (obj != null)
+                    {
+                        Session["AdminID"] = objUser.AdminID.ToString();
+                        Session["AdminEmail"] = objUser.AdminEmail.ToString();
+                        return RedirectToAction("Dashboard");
+                    }
+                }
+            }
+            return View(objUser);
         }
     }
 }

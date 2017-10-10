@@ -9,6 +9,8 @@
 
 @using (Html.BeginForm())
 {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
     <div class="form-group" style="width:19em; margin:0 auto ">
             <h4 style="text-align:center">Login Form</h4>
         <hr />

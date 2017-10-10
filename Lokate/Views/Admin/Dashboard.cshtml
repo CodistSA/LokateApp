@@ -4,6 +4,8 @@
     Layout = "~/Views/Shared/_LokateMasterPage.cshtml";
 }
 
+@if (Session["AdminID"] != null) { <text> 
+    Welcome @Session["AdminEmail"].ToString() </text>}
 
 <div id="content">
 

@@ -37,6 +37,7 @@ namespace Lokate.Controllers
             return View("Login");
         }
         [HttpPost, ValidateInput(false)]
+        [ValidateAntiForgeryToken]
         public ActionResult Login(Login model)
         {
             if (ModelState.IsValid)
